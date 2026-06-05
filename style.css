@@ -1,54 +1,112 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#f2f2f2;
+/* Body */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
 }
 
-.calculator{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
-    width:320px;
+/* Calculator Container */
+.calculator {
+    width: 340px;
+    background: #1e1e2f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
 }
 
-#display{
-    width:100%;
-    height:60px;
-    font-size:24px;
-    text-align:right;
-    padding:10px;
-    margin-bottom:15px;
+/* Display */
+#display {
+    width: 100%;
+    height: 70px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: #111827;
+    color: #00ffff;
+    font-size: 30px;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
-.buttons{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
-button{
-    height:60px;
-    font-size:20px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    background:#e0e0e0;
+/* General Button Style */
+button {
+    height: 65px;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-button:hover{
-    background:#d0d0d0;
+/* Control Buttons */
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3) {
+    background-color: #ef4444;
+    color: white;
 }
 
-.zero{
-    grid-column:span 2;
+/* Operator Buttons */
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16) {
+    background-color: #f59e0b;
+    color: white;
+}
+
+/* Number Buttons */
+button:nth-child(5),
+button:nth-child(6),
+button:nth-child(7),
+button:nth-child(9),
+button:nth-child(10),
+button:nth-child(11),
+button:nth-child(13),
+button:nth-child(14),
+button:nth-child(15),
+button:nth-child(17),
+button:nth-child(18) {
+    background-color: #374151;
+    color: white;
+}
+
+/* Equal Button */
+button:nth-child(16) {
+    background-color: #22c55e;
+}
+
+/* Zero Button */
+.zero {
+    grid-column: span 2;
+}
+
+/* Hover Effect */
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Click Effect */
+button:active {
+    transform: scale(0.95);
 }
